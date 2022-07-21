@@ -17,6 +17,7 @@ public class SimpleFunctions {
         return sum;
     }
 
+    //Returns true if an integer list is sorted (ascending order)
     public Boolean Task5(List<Integer> list) {
         Boolean isSorted = true;
         int pos = 0;
