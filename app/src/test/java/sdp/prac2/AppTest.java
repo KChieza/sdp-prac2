@@ -8,17 +8,18 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     //tests if task2 removes first character from each element in list
-    @Test void task2RemovesFirstCharacter() {
-        //Arrange
-        SimpleFunctions testClass = new SimpleFunctions();
-        List<String> strings = Arrays.asList("hi", "bye", "greetings", "top of the morning");
-        List<String> expected = Arrays.asList("i", "ye", "reetings", "op of the morning");
-        //Act
-        List<String> result = testClass.Task2(strings);
-        //Assert
-        assertIterableEquals(expected, result);
-    }
+    // @Test void task2RemovesFirstCharacter() {
+    //     //Arrange
+    //     SimpleFunctions testClass = new SimpleFunctions();
+    //     List<String> strings = Arrays.asList("hi", "bye", "greetings", "top of the morning");
+    //     List<String> expected = Arrays.asList("i", "ye", "reetings", "op of the morning");
+    //     //Act
+    //     List<String> result = testClass.Task2(strings);
+    //     //Assert
+    //     assertIterableEquals(expected, result);
+    // }
 
+<<<<<<< HEAD
     //tests if task2 removes elements without characters from list
     @Test void task2RemovesEmptyElements() {
         //Arrange
@@ -66,6 +67,19 @@ class AppTest {
         //Assert
         assertIterableEquals(expected,result);
     }
+=======
+    // //tests if task2 removes elements without characters from list
+    // @Test void task2RemovesEmptyElements() {
+    //     //Arrange
+    //     SimpleFunctions testClass = new SimpleFunctions();
+    //     List<String> strings = Arrays.asList("hi", "", "", "top of the morning");
+    //     List<String> expected = Arrays.asList("i", "op of the morning");
+    //     //Act
+    //     List<String> result = testClass.Task2(strings);
+    //     //Assert
+    //     assertIterableEquals(expected, result);
+    // }
+>>>>>>> e68400d044b5dd325d8215d4a2dc4979f15619d2
 
     /**
      * Checking if task5 actually sees if a list is actually sorted, with an unsorted list.
@@ -114,9 +128,9 @@ class AppTest {
         SimpleFunctions testClass = new SimpleFunctions();
         List<Integer> a = Arrays.asList(1,2,3,4,5,6);
         List<Integer> b = Arrays.asList(4,2,0,1);
-        List<Integer> expected = Arrays.asLisst(11);
+        List<Integer> expected = Arrays.asList(11);
         //Act
-        List<Integer> result = testClass.Task1(a,b);
+        int result = testClass.Task1(a,b);
         //Assert
         assertEquals(expected, result);
 
@@ -130,9 +144,9 @@ class AppTest {
         SimpleFunctions testClass = new SimpleFunctions();
         List<Integer> a = Arrays.asList(1,2,3,4,5,6);
         List<Integer> b = Arrays.asList(7,2,0,1);
-        List<Integer> expected = Arrays.asLisst(6);
+        List<Integer> expected = Arrays.asList(6);
         //Act
-        List<Integer> result = testClass.Task1(a,b);
+        int result = testClass.Task1(a,b);
         //Assert
         assertEquals(expected, result);
      }
@@ -141,9 +155,10 @@ class AppTest {
         //Arrange
         SimpleFunctions tester = new SimpleFunctions();
         List<Integer> origNums = Arrays.asList(1, 24, 103, 267, 999, 1008);
+        List<Integer> emptyList = new ArrayList<>();
         List<Integer> roundedNums = Arrays.asList(100, 100, 200, 300, 1000, 1100);
         //Act
-        List<Integer> result = tester.Task6(origNums);
+        List<Integer> result = tester.Task6(origNums, emptyList);
         //Assert
         assertEquals(roundedNums, result);
     }
@@ -153,9 +168,10 @@ class AppTest {
         //Arrange
         SimpleFunctions tester = new SimpleFunctions();
         List<Integer> origNums = Arrays.asList(0, 100, 200, 300, 1000, 1100, 10000);
+        List<Integer> emptyList = new ArrayList<>();
         List<Integer> roundedNums = Arrays.asList(0, 100, 200, 300, 1000, 1100, 10000);
         //Act
-        List<Integer> result = tester.Task6(origNums);
+        List<Integer> result = tester.Task6(origNums, emptyList);
         //Assert
         assertEquals(roundedNums, result);
     }

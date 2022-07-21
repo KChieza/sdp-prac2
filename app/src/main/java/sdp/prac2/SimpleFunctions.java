@@ -36,11 +36,11 @@ public class SimpleFunctions {
     public Boolean Task5(List<Integer> list) {
         Boolean isSorted = true;
         int pos = 0;
-        if (list.size == 0 || list.size == 1) {
+        if (list.size() == 0 || list.size() == 1) {
             return isSorted;
         }
         else {
-            while (pos < list.size-1 && isSorted) {
+            while (pos < list.size()-1 && isSorted) {
                 if (list.get(pos) > list.get(pos+1)) {
                     isSorted = false;
                 }
@@ -67,5 +67,25 @@ public class SimpleFunctions {
 
         return result;
     }
+    public List<String> Task2(List <String> list){
+        String temp = "";
+        int count= 0;
+        //List <String> newList = new ArrayList<String>();
+       
+        for(String fCharacters : list ){
+            
+            if(fCharacters.length()==0){
+                list.remove(fCharacters);
+            }else{
+                temp = fCharacters.substring(1); //get all the characters after the first character
+                list.set(count, temp); //Replace element with new string
+            }
+            count = count +1;
+        }
+        
+        return list;
+    }
+    }
+
 }
 
