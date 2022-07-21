@@ -16,5 +16,28 @@ public class SimpleFunctions {
         }
         return sum;
     }
+    public List<String> Task2(List <String> list){
+        String temp = "";
+        int count= 0;
+        //List <String> newList = new ArrayList<String>();
+         for(String y:list){
+            System.out.println(y);
+        }
+        for(String fCharacters : list ){
+            
+            if(fCharacters.length()==0){
+                list.remove(fCharacters);
+            }else{
+                temp = fCharacters.substring(1); //get all the characters after the first character
+                list.set(count, temp); //Replace element with new string
+            }
+            count +=1;
+        }
+        for(String x:list){
+            System.out.println(x);
+        }
+        
+        return list;
+    }
 }
 
