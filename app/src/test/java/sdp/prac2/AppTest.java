@@ -127,13 +127,8 @@ class AppTest {
         List<String> strings = Arrays.asList("(())", "((()))", "((((()))))");
        
         //Act
-        boolean result = testClass.Task2(strings);
-
-        List<Integer> a = Arrays.asList(1,2,3,4,5,6);
-        List<Integer> b = Arrays.asList(4,2,0,1);
-        List<Integer> expected = Arrays.asList(11);
-        //Act
-        int result = testClass.Task1(a,b);
+        boolean result = testClass.Task3(strings);
+      
 
         //Assert
         assertIterableEquals(true, result);
@@ -147,7 +142,7 @@ class AppTest {
         List<String> strings = Arrays.asList("(()(()))", "((()", "()()(");
        
         //Act
-        boolean result = testClass.Task2(strings);
+        boolean result = testClass.Task3(strings);
         //Assert
         assertIterableEquals(false, result);
     }
