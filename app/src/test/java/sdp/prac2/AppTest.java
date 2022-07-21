@@ -30,4 +30,42 @@ class AppTest {
         //Assert
         assertIterableEquals(expected, result);
     }
+
+    /**
+     * Checking if task5 actually sees if a list is actually sorted, with an unsorted list.
+     */
+    @Test void task5IsSorted_Unsorted() {
+        //Arrange
+        SimpleFunctions tester = new SimpleFunctions();
+        List<Integer> not_sorted = new ArrayList<>();
+        not_sorted.add(1);
+        not_sorted.add(2);
+        not_sorted.add(3);
+        not_sorted.add(4);
+        not_sorted.add(6);
+        not_sorted.add(5);
+        //Act
+        boolean result = tester.Task5(not_sorted);
+        //Assert
+        assertEquals(false, result);
+    }
+
+    /**
+     * Checking if task5 actually sees if a list is actually sorted, with a sorted list.
+     */
+    @Test void task5IsSorted_Sorted() {
+        //Arrange
+        SimpleFunctions tester = new SimpleFunctions();
+        List<Integer> totally_sorted = new ArrayList<>();
+        totally_sorted.add(1);
+        totally_sorted.add(2);
+        totally_sorted.add(3);
+        totally_sorted.add(4);
+        totally_sorted.add(5);
+        totally_sorted.add(6);
+        //Act
+        boolean result = tester.Task5(totally_sorted);
+        //Assert
+        assertEquals(true, result);
+    }
 }
