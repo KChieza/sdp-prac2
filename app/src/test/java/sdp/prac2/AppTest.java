@@ -30,7 +30,7 @@ class AppTest {
         //Assert
         assertIterableEquals(expected, result);
     }
-    /**
+    /* /**
        Checking if task 3 works for brackets that are nested correctly and they balance
      */
     @Test void task3Matching_and_Nested_Correctly() {
@@ -54,6 +54,6 @@ class AppTest {
         boolean result = testClass.Task2(strings);
         //Assert
         assertIterableEquals(false, result);
-    }
+    } */
 
 }
