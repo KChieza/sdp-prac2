@@ -30,6 +30,42 @@ class AppTest {
         //Assert
         assertIterableEquals(expected, result);
     }
+    //tests if task4 works with equal list lengths 
+    @Test void task4EqualLists(){
+        //Arrange 
+        SimpleFunctions testing = new SimpleFunctions();
+        List<int> a = Arrays.asList(1,2,3,4);
+        List<int> b = Arrays.asList(2,4,6,8);
+        List<int> expected = Arrays.asList(8,12,12,8);
+        //Act
+        List<int> result = testing.Task4(a,b);
+        //Assert
+        assertIterableEquals(expected,result);
+    }
+    //tests if task4 returns null with unequal list lengths 
+    @Test void task4UnequalLengths1(){
+        //Arrange 
+        SimpleFunctions testing = new SimpleFunctions();
+        List<int> a = Arrays.asList(1,2,3,4);
+        List<int> b = Arrays.asList(2,4,6);
+        List<int> expected = null;
+        //Act
+        List<int> result = testing.Task4(a,b);
+        //Assert
+        assertIterableEquals(expected,result);
+    }
+    //tests if task4 returns null with unequal list lengths
+    @Test void task4UnequalLengths2(){
+        //Arrange 
+        SimpleFunctions testing = new SimpleFunctions();
+        List<int> a = Arrays.asList(1,2,3,4);
+        List<int> b = Arrays.asList(2,4,6);
+        List<int> expected = null;
+        //Act
+        List<int> result = testing.Task4(b,a);
+        //Assert
+        assertIterableEquals(expected,result);
+    }
 
     /**
      * Checking if task5 actually sees if a list is actually sorted, with an unsorted list.
