@@ -19,6 +19,10 @@ class AppTest {
     //     assertIterableEquals(expected, result);
     // }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1cb0e47eefd0c497a227da2f98c331e947ab0eab
     //tests if task2 removes elements without characters from list
     @Test void task2RemovesEmptyElements() {
         //Arrange
@@ -30,6 +34,7 @@ class AppTest {
         //Assert
         assertIterableEquals(expected, result);
     }
+
     //tests if task4 works with equal list lengths 
     @Test void task4EqualLists(){
         //Arrange 
@@ -66,68 +71,58 @@ class AppTest {
         //Assert
         assertIterableEquals(expected,result);
     }
+<<<<<<< HEAD
+=======
+
+    // //tests if task2 removes elements without characters from list
+    // @Test void task2RemovesEmptyElements() {
+    //     //Arrange
+    //     SimpleFunctions testClass = new SimpleFunctions();
+    //     List<String> strings = Arrays.asList("hi", "", "", "top of the morning");
+    //     List<String> expected = Arrays.asList("i", "op of the morning");
+    //     //Act
+    //     List<String> result = testClass.Task2(strings);
+    //     //Assert
+    //     assertIterableEquals(expected, result);
+    // }
+>>>>>>> 1cb0e47eefd0c497a227da2f98c331e947ab0eab
 
     /**
-     * Checking if task5 actually sees if a list is actually sorted, with an unsorted list.
+       Checking if task 3 works for brackets that are nested correctly and they balance
      */
-    @Test void task5IsSorted_Unsorted() {
-        //Arrange
-        SimpleFunctions tester = new SimpleFunctions();
-        List<Integer> not_sorted = new ArrayList<>();
-        not_sorted.add(1);
-        not_sorted.add(2);
-        not_sorted.add(3);
-        not_sorted.add(4);
-        not_sorted.add(6);
-        not_sorted.add(5);
-        //Act
-        boolean result = tester.Task5(not_sorted);
-        //Assert
-        assertEquals(false, result);
-    }
-
-    /**
-     * Checking if task5 actually sees if a list is actually sorted, with a sorted list.
-     */
-    @Test void task5IsSorted_Sorted() {
-        //Arrange
-        SimpleFunctions tester = new SimpleFunctions();
-        List<Integer> totally_sorted = new ArrayList<>();
-        totally_sorted.add(1);
-        totally_sorted.add(2);
-        totally_sorted.add(3);
-        totally_sorted.add(4);
-        totally_sorted.add(5);
-        totally_sorted.add(6);
-        //Act
-        boolean result = tester.Task5(totally_sorted);
-        //Assert
-        assertEquals(true, result);
-    }
-
-    /**
-     * Checking Task1 functions with correct input
-     */
-
-     @Test void task1Works() {
+    @Test void task3Matching_and_Nested_Correctly() {
         //Arrange
         SimpleFunctions testClass = new SimpleFunctions();
+
+        List<String> strings = Arrays.asList("(())", "((()))", "((((()))))");
+       
+        //Act
+        boolean result = testClass.Task2(strings);
+
         List<Integer> a = Arrays.asList(1,2,3,4,5,6);
         List<Integer> b = Arrays.asList(4,2,0,1);
         List<Integer> expected = Arrays.asList(11);
         //Act
         int result = testClass.Task1(a,b);
+
         //Assert
-        assertEquals(expected, result);
+        assertIterableEquals(true, result);
+    }
 
-     }
-
-    /**
-     * Checing Task1 funtions with out of bounds input
-     */
-     @Test void task1OutofBounds() {
+    // Checking if task 3 works for brackets that are not nested correctly and they do not balance
+    @Test void task2Matching_and_not_Nested_Correctly() {
         //Arrange
         SimpleFunctions testClass = new SimpleFunctions();
+
+        List<String> strings = Arrays.asList("(()(()))", "((()", "()()(");
+       
+        //Act
+        boolean result = testClass.Task2(strings);
+        //Assert
+        assertIterableEquals(false, result);
+    }
+
+
         List<Integer> a = Arrays.asList(1,2,3,4,5,6);
         List<Integer> b = Arrays.asList(7,2,0,1);
         List<Integer> expected = Arrays.asList(6);
@@ -161,4 +156,5 @@ class AppTest {
         //Assert
         assertEquals(roundedNums, result);
     }
+
 }
