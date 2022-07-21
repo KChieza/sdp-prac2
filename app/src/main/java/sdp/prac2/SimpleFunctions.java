@@ -31,6 +31,7 @@ public class SimpleFunctions {
             }
         }
         return b;
+    } // ← Jen forgot to add this. 
 
     //Returns true if an integer list is sorted (ascending order)
     public Boolean Task5(List<Integer> list) {
@@ -62,7 +63,7 @@ public class SimpleFunctions {
         List<Integer> result = new ArrayList<>();
 
         for (int i = 0; i < a.size(); i++) {
-            result.add(a.get(i) * b.get(b.size() - i));
+            result.add(a.get(i) * b.get(b.size() - i - 1));
         }
 
         return result;
@@ -86,11 +87,16 @@ public class SimpleFunctions {
         return list;
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     }
 =======
  
 
 >>>>>>> g20c1611
 
+>>>>>>> 1cb0e47eefd0c497a227da2f98c331e947ab0eab
 }
+
+
 

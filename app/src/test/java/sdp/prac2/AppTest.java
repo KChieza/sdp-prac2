@@ -19,7 +19,10 @@ class AppTest {
     //     assertIterableEquals(expected, result);
     // }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 1cb0e47eefd0c497a227da2f98c331e947ab0eab
     //tests if task2 removes elements without characters from list
     @Test void task2RemovesEmptyElements() {
         //Arrange
@@ -36,11 +39,11 @@ class AppTest {
     @Test void task4EqualLists(){
         //Arrange 
         SimpleFunctions testing = new SimpleFunctions();
-        List<int> a = Arrays.asList(1,2,3,4);
-        List<int> b = Arrays.asList(2,4,6,8);
-        List<int> expected = Arrays.asList(8,12,12,8);
+        List<Integer> a = Arrays.asList(1,2,3,4);
+        List<Integer> b = Arrays.asList(2,4,6,8);
+        List<Integer> expected = Arrays.asList(8,12,12,8);
         //Act
-        List<int> result = testing.Task4(a,b);
+        List<Integer> result = testing.Task4(a,b);
         //Assert
         assertIterableEquals(expected,result);
     }
@@ -48,11 +51,11 @@ class AppTest {
     @Test void task4UnequalLengths1(){
         //Arrange 
         SimpleFunctions testing = new SimpleFunctions();
-        List<int> a = Arrays.asList(1,2,3,4);
-        List<int> b = Arrays.asList(2,4,6);
-        List<int> expected = null;
+        List<Integer> a = Arrays.asList(1,2,3,4);
+        List<Integer> b = Arrays.asList(2,4,6);
+        List<Integer> expected = null;
         //Act
-        List<int> result = testing.Task4(a,b);
+        List<Integer> result = testing.Task4(a,b);
         //Assert
         assertIterableEquals(expected,result);
     }
@@ -60,14 +63,16 @@ class AppTest {
     @Test void task4UnequalLengths2(){
         //Arrange 
         SimpleFunctions testing = new SimpleFunctions();
-        List<int> a = Arrays.asList(1,2,3,4);
-        List<int> b = Arrays.asList(2,4,6);
-        List<int> expected = null;
+        List<Integer> a = Arrays.asList(1,2,3,4);
+        List<Integer> b = Arrays.asList(2,4,6);
+        List<Integer> expected = null;
         //Act
-        List<int> result = testing.Task4(b,a);
+        List<Integer> result = testing.Task4(b,a);
         //Assert
         assertIterableEquals(expected,result);
     }
+<<<<<<< HEAD
+=======
 
     // //tests if task2 removes elements without characters from list
     // @Test void task2RemovesEmptyElements() {
@@ -80,6 +85,7 @@ class AppTest {
     //     //Assert
     //     assertIterableEquals(expected, result);
     // }
+>>>>>>> 1cb0e47eefd0c497a227da2f98c331e947ab0eab
 
     @Test void task1Workss() {
         //Arrange
@@ -140,13 +146,8 @@ class AppTest {
         List<String> strings = Arrays.asList("(())", "((()))", "((((()))))");
        
         //Act
-        boolean result = testClass.Task2(strings);
-
-        List<Integer> a = Arrays.asList(1,2,3,4,5,6);
-        List<Integer> b = Arrays.asList(4,2,0,1);
-        List<Integer> expected = Arrays.asList(11);
-        //Act
-        int result = testClass.Task1(a,b);
+        boolean result = testClass.Task3(strings);
+      
 
         //Assert
         assertIterableEquals(true, result);
@@ -160,7 +161,7 @@ class AppTest {
         List<String> strings = Arrays.asList("(()(()))", "((()", "()()(");
        
         //Act
-        boolean result = testClass.Task2(strings);
+        boolean result = testClass.Task3(strings);
         //Assert
         assertIterableEquals(false, result);
     }
