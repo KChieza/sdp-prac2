@@ -69,6 +69,37 @@ class AppTest {
         assertEquals(true, result);
     }
 
+    /**
+     * Checking Task1 functions with correct input
+     */
+
+     @Test void task1Works() {
+        //Arrange
+        SimpleFunctions testClass = new SimpleFunctions();
+        List<Integer> a = Arrays.asList(1,2,3,4,5,6);
+        List<Integer> b = Arrays.asList(4,2,0,1);
+        List<Integer> expected = Arrays.asLisst(11);
+        //Act
+        List<Integer> result = testClass.Task1(a,b);
+        //Assert
+        assertEquals(expected, result);
+
+     }
+
+    /**
+     * Checing Task1 funtions with out of bounds input
+     */
+     @Test void task1OutofBounds() {
+        //Arrange
+        SimpleFunctions testClass = new SimpleFunctions();
+        List<Integer> a = Arrays.asList(1,2,3,4,5,6);
+        List<Integer> b = Arrays.asList(7,2,0,1);
+        List<Integer> expected = Arrays.asLisst(6);
+        //Act
+        List<Integer> result = testClass.Task1(a,b);
+        //Assert
+        assertEquals(expected, result);
+     }
     //Checks that numbers not multiples of 100 are rounded up to the nearest 100
     @Test void task6Rounds_Up() {
         //Arrange
