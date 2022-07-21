@@ -7,22 +7,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    //tests if task2 removes first character from each element in list
-    // @Test void task2RemovesFirstCharacter() {
-    //     //Arrange
-    //     SimpleFunctions testClass = new SimpleFunctions();
-    //     List<String> strings = Arrays.asList("hi", "bye", "greetings", "top of the morning");
-    //     List<String> expected = Arrays.asList("i", "ye", "reetings", "op of the morning");
-    //     //Act
-    //     List<String> result = testClass.Task2(strings);
-    //     //Assert
-    //     assertIterableEquals(expected, result);
-    // }
+    tests if task2 removes first character from each element in list
+    @Test void task2RemovesFirstCharacter() {
+        //Arrange
+        SimpleFunctions testClass = new SimpleFunctions();
+        List<String> strings = Arrays.asList("hi", "bye", "greetings", "top of the morning");
+        List<String> expected = Arrays.asList("i", "ye", "reetings", "op of the morning");
+        //Act
+        List<String> result = testClass.Task2(strings);
+        //Assert
+        assertIterableEquals(expected, result);
+    }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 1cb0e47eefd0c497a227da2f98c331e947ab0eab
     //tests if task2 removes elements without characters from list
     @Test void task2RemovesEmptyElements() {
         //Arrange
@@ -71,21 +67,6 @@ class AppTest {
         //Assert
         assertIterableEquals(expected,result);
     }
-<<<<<<< HEAD
-=======
-
-    // //tests if task2 removes elements without characters from list
-    // @Test void task2RemovesEmptyElements() {
-    //     //Arrange
-    //     SimpleFunctions testClass = new SimpleFunctions();
-    //     List<String> strings = Arrays.asList("hi", "", "", "top of the morning");
-    //     List<String> expected = Arrays.asList("i", "op of the morning");
-    //     //Act
-    //     List<String> result = testClass.Task2(strings);
-    //     //Assert
-    //     assertIterableEquals(expected, result);
-    // }
->>>>>>> 1cb0e47eefd0c497a227da2f98c331e947ab0eab
 
     @Test void task1Workss() {
         //Arrange
