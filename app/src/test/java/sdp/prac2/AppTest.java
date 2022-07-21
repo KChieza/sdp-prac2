@@ -87,41 +87,7 @@ class AppTest {
     // }
 >>>>>>> 1cb0e47eefd0c497a227da2f98c331e947ab0eab
 
-    /**
-       Checking if task 3 works for brackets that are nested correctly and they balance
-     */
-    @Test void task3Matching_and_Nested_Correctly() {
-        //Arrange
-        SimpleFunctions testClass = new SimpleFunctions();
-
-        List<String> strings = Arrays.asList("(())", "((()))", "((((()))))");
-       
-        //Act
-        boolean result = testClass.Task2(strings);
-
-        List<Integer> a = Arrays.asList(1,2,3,4,5,6);
-        List<Integer> b = Arrays.asList(4,2,0,1);
-        List<Integer> expected = Arrays.asList(11);
-        //Act
-        int result = testClass.Task1(a,b);
-
-        //Assert
-        assertIterableEquals(true, result);
-    }
-
-    // Checking if task 3 works for brackets that are not nested correctly and they do not balance
-    @Test void task2Matching_and_not_Nested_Correctly() {
-        //Arrange
-        SimpleFunctions testClass = new SimpleFunctions();
-
-        List<String> strings = Arrays.asList("(()(()))", "((()", "()()(");
-       
-        //Act
-        boolean result = testClass.Task2(strings);
-        //Assert
-        assertIterableEquals(false, result);
-    }
-
+ 
 
         List<Integer> a = Arrays.asList(1,2,3,4,5,6);
         List<Integer> b = Arrays.asList(7,2,0,1);
@@ -156,5 +122,36 @@ class AppTest {
         //Assert
         assertEquals(roundedNums, result);
     }
+       /**
+       Checking if task 3 works for brackets that are nested correctly and they balance
+     */
+    
+    @Test void task3Matching_and_Nested_Correctly() {
+        //Arrange
+        SimpleFunctions testClass = new SimpleFunctions();
+
+        List<String> strings = Arrays.asList("(())", "((()))", "((((()))))");
+       
+        //Act
+        boolean result = testClass.Task3(strings);
+      
+
+        //Assert
+        assertIterableEquals(true, result);
+    }
+
+    // Checking if task 3 works for brackets that are not nested correctly and they do not balance
+    @Test void task2Matching_and_not_Nested_Correctly() {
+        //Arrange
+        SimpleFunctions testClass = new SimpleFunctions();
+
+        List<String> strings = Arrays.asList("(()(()))", "((()", "()()(");
+       
+        //Act
+        boolean result = testClass.Task3(strings);
+        //Assert
+        assertIterableEquals(false, result);
+    }
+
 
 }
