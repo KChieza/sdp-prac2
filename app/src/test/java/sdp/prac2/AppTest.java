@@ -100,4 +100,27 @@ class AppTest {
         //Assert
         assertEquals(expected, result);
      }
+    //Checks that numbers not multiples of 100 are rounded up to the nearest 100
+    @Test void task6Rounds_Up() {
+        //Arrange
+        SimpleFunctions tester = new SimpleFunctions();
+        List<Integer> origNums = Arrays.asList(1, 24, 103, 267, 999, 1008);
+        List<Integer> roundedNums = Arrays.asList(100, 100, 200, 300, 1000, 1100);
+        //Act
+        List<Integer> result = tester.Task6(origNums);
+        //Assert
+        assertEquals(roundedNums, result);
+    }
+
+    //Checks that numbers multiples of 100 stay the same
+    @Test void task6No_Change() {
+        //Arrange
+        SimpleFunctions tester = new SimpleFunctions();
+        List<Integer> origNums = Arrays.asList(0, 100, 200, 300, 1000, 1100, 10000);
+        List<Integer> roundedNums = Arrays.asList(0, 100, 200, 300, 1000, 1100, 10000);
+        //Act
+        List<Integer> result = tester.Task6(origNums);
+        //Assert
+        assertEquals(roundedNums, result);
+    }
 }
