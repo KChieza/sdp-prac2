@@ -105,9 +105,10 @@ class AppTest {
         //Arrange
         SimpleFunctions tester = new SimpleFunctions();
         List<Integer> origNums = Arrays.asList(1, 24, 103, 267, 999, 1008);
+        List<Integer> emptyList = new ArrayList<>();
         List<Integer> roundedNums = Arrays.asList(100, 100, 200, 300, 1000, 1100);
         //Act
-        List<Integer> result = tester.Task6(origNums);
+        List<Integer> result = tester.Task6(origNums, emptyList);
         //Assert
         assertEquals(roundedNums, result);
     }
@@ -117,9 +118,10 @@ class AppTest {
         //Arrange
         SimpleFunctions tester = new SimpleFunctions();
         List<Integer> origNums = Arrays.asList(0, 100, 200, 300, 1000, 1100, 10000);
+        List<Integer> emptyList = new ArrayList<>();
         List<Integer> roundedNums = Arrays.asList(0, 100, 200, 300, 1000, 1100, 10000);
         //Act
-        List<Integer> result = tester.Task6(origNums);
+        List<Integer> result = tester.Task6(origNums, emptyList);
         //Assert
         assertEquals(roundedNums, result);
     }
