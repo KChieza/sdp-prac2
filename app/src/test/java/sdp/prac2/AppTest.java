@@ -30,98 +30,30 @@ class AppTest {
         //Assert
         assertIterableEquals(expected, result);
     }
-
-  
     /**
-     * Checking if task5 actually sees if a list is actually sorted, with an unsorted list.
+       Checking if task 3 works for brackets that are nested correctly and they balance
      */
-    @Test void task5IsSorted_Unsorted() {
-        //Arrange
-        SimpleFunctions tester = new SimpleFunctions();
-        List<Integer> not_sorted = new ArrayList<>();
-        not_sorted.add(1);
-        not_sorted.add(2);
-        not_sorted.add(3);
-        not_sorted.add(4);
-        not_sorted.add(6);
-        not_sorted.add(5);
-        //Act
-        boolean result = tester.Task5(not_sorted);
-        //Assert
-        assertEquals(false, result);
-    }
-
-    /**
-     * Checking if task5 actually sees if a list is actually sorted, with a sorted list.
-     */
-    @Test void task5IsSorted_Sorted() {
-        //Arrange
-        SimpleFunctions tester = new SimpleFunctions();
-        List<Integer> totally_sorted = new ArrayList<>();
-        totally_sorted.add(1);
-        totally_sorted.add(2);
-        totally_sorted.add(3);
-        totally_sorted.add(4);
-        totally_sorted.add(5);
-        totally_sorted.add(6);
-        //Act
-        boolean result = tester.Task5(totally_sorted);
-        //Assert
-        assertEquals(true, result);
-    }
-
-    /**
-     * Checking Task1 functions with correct input
-     */
-
-     @Test void task1Works() {
+    @Test void task3Matching_and_Nested_Correctly() {
         //Arrange
         SimpleFunctions testClass = new SimpleFunctions();
-        List<Integer> a = Arrays.asList(1,2,3,4,5,6);
-        List<Integer> b = Arrays.asList(4,2,0,1);
-        List<Integer> expected = Arrays.asLisst(11);
+        List<String> strings = Arrays.asList("(())", "((()))", "((((()))))");
+       
         //Act
-        List<Integer> result = testClass.Task1(a,b);
+        boolean result = testClass.Task2(strings);
         //Assert
-        assertEquals(expected, result);
+        assertIterableEquals(true, result);
+    }
 
-     }
-
-    /**
-     * Checing Task1 funtions with out of bounds input
-     */
-     @Test void task1OutofBounds() {
+    // Checking if task 3 works for brackets that are not nested correctly and they do not balance
+    @Test void task2Matching_and_not_Nested_Correctly() {
         //Arrange
         SimpleFunctions testClass = new SimpleFunctions();
-        List<Integer> a = Arrays.asList(1,2,3,4,5,6);
-        List<Integer> b = Arrays.asList(7,2,0,1);
-        List<Integer> expected = Arrays.asLisst(6);
+        List<String> strings = Arrays.asList("(()(()))", "((()", "()()(");
+       
         //Act
-        List<Integer> result = testClass.Task1(a,b);
+        boolean result = testClass.Task2(strings);
         //Assert
-        assertEquals(expected, result);
-     }
-    //Checks that numbers not multiples of 100 are rounded up to the nearest 100
-    @Test void task6Rounds_Up() {
-        //Arrange
-        SimpleFunctions tester = new SimpleFunctions();
-        List<Integer> origNums = Arrays.asList(1, 24, 103, 267, 999, 1008);
-        List<Integer> roundedNums = Arrays.asList(100, 100, 200, 300, 1000, 1100);
-        //Act
-        List<Integer> result = tester.Task6(origNums);
-        //Assert
-        assertEquals(roundedNums, result);
+        assertIterableEquals(false, result);
     }
 
-    //Checks that numbers multiples of 100 stay the same
-    @Test void task6No_Change() {
-        //Arrange
-        SimpleFunctions tester = new SimpleFunctions();
-        List<Integer> origNums = Arrays.asList(0, 100, 200, 300, 1000, 1100, 10000);
-        List<Integer> roundedNums = Arrays.asList(0, 100, 200, 300, 1000, 1100, 10000);
-        //Act
-        List<Integer> result = tester.Task6(origNums);
-        //Assert
-        assertEquals(roundedNums, result);
-    }
 }

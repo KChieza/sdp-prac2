@@ -85,7 +85,12 @@ public class SimpleFunctions {
         
         return list;
     }
+<<<<<<< HEAD
     }
+=======
+ 
+
+>>>>>>> g20c1611
 
 }
 
