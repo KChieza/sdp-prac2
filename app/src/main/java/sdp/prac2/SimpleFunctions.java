@@ -17,6 +17,23 @@ public class SimpleFunctions {
         return sum;
     }
 
+    public Boolean Task5(List<Integer> list) {
+        Boolean isSorted = true;
+        int pos = 0;
+        if (list.size == 0 || list.size == 1) {
+            return isSorted;
+        }
+        else {
+            while (pos < list.size-1 && isSorted) {
+                if (list.get(pos) > list.get(pos+1)) {
+                    isSorted = false;
+                }
+                pos++;
+            }
+            return isSorted;
+        }
+    }
+
     /**
      * Multiplies the elements in the first list in sequential order, with the elements of 
      * another list in reversing order.
