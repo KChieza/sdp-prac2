@@ -30,4 +30,30 @@ class AppTest {
         //Assert
         assertIterableEquals(expected, result);
     }
+    /**
+       Checking if task 3 works for brackets that are nested correctly and they balance
+     */
+    @Test void task3Matching_and_Nested_Correctly() {
+        //Arrange
+        SimpleFunctions testClass = new SimpleFunctions();
+        List<String> strings = Arrays.asList("(())", "((()))", "((((()))))");
+       
+        //Act
+        boolean result = testClass.Task2(strings);
+        //Assert
+        assertIterableEquals(true, result);
+    }
+
+    // Checking if task 3 works for brackets that are not nested correctly and they do not balance
+    @Test void task2Matching_and_not_Nested_Correctly() {
+        //Arrange
+        SimpleFunctions testClass = new SimpleFunctions();
+        List<String> strings = Arrays.asList("(()(()))", "((()", "()()(");
+       
+        //Act
+        boolean result = testClass.Task2(strings);
+        //Assert
+        assertIterableEquals(false, result);
+    }
+
 }
