@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    tests if task2 removes first character from each element in list
+    //tests if task2 removes first character from each element in list
     @Test void task2RemovesFirstCharacter() {
         //Arrange
         SimpleFunctions testClass = new SimpleFunctions();
@@ -131,7 +131,7 @@ class AppTest {
       
 
         //Assert
-        assertIterableEquals(true, result);
+        assertEquals(true, result);
     }
 
     // Checking if task 3 works for brackets that are not nested correctly and they do not balance
@@ -144,7 +144,46 @@ class AppTest {
         //Act
         boolean result = testClass.Task3(strings);
         //Assert
-        assertIterableEquals(false, result);
+        assertEquals(false, result);
+    }
+    
+    
+    /**
+     * Checking if task5 actually sees if a list is actually sorted, with an unsorted list.
+     */
+    @Test void task5IsSorted_Unsorted() {
+        //Arrange
+        SimpleFunctions tester = new SimpleFunctions();
+        List<Integer> not_sorted = new ArrayList<>();
+        not_sorted.add(1);
+        not_sorted.add(2);
+        not_sorted.add(3);
+        not_sorted.add(4);
+        not_sorted.add(6);
+        not_sorted.add(5);
+        //Act
+        boolean result = tester.Task5(not_sorted);
+        //Assert
+        assertEquals(false, result);
+    }
+
+    /**
+     * Checking if task5 actually sees if a list is actually sorted, with a sorted list.
+     */
+    @Test void task5IsSorted_Sorted() {
+        //Arrange
+        SimpleFunctions tester = new SimpleFunctions();
+        List<Integer> totally_sorted = new ArrayList<>();
+        totally_sorted.add(1);
+        totally_sorted.add(2);
+        totally_sorted.add(3);
+        totally_sorted.add(4);
+        totally_sorted.add(5);
+        totally_sorted.add(6);
+        //Act
+        boolean result = tester.Task5(totally_sorted);
+        //Assert
+        assertEquals(true, result);
     }
 
 
